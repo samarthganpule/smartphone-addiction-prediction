@@ -5,6 +5,7 @@ import seaborn as sns
 # Load the cleaned data
 df = pd.read_pickle("cleaned_data.pkl")
 
+
 # 1. Distribution of Daily Screen Time
 plt.figure(figsize=(8, 5))
 sns.histplot(df['Daily_Screen_Time_Hours'], bins=30, kde=True)
@@ -12,6 +13,7 @@ plt.title('Distribution of Daily Screen Time (Hours)')
 plt.xlabel('Daily Screen Time (Hours)')
 plt.ylabel('Frequency')
 plt.show()
+
 
 # 2. Correlation Heatmap (Only numeric columns)
 numeric_df = df.select_dtypes(include=['number'])
